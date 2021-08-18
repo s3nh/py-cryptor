@@ -31,8 +31,8 @@ def main():
     _keypath = config['KEY_PATH']
 
     
-    _iv = read_key('keys/_iv.bin')
-    _key = read_key('keys/_key.bin')
+    _iv = read_key(_ivpath)
+    _key = read_key(_keypath)
 
     
     encr = Encryptor(path = path, outname = outpath, create = False, _key = _key, _iv = _iv)
